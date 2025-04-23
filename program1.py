@@ -1,0 +1,20 @@
+
+data = str(input("Enter text to write to the file:"))
+file2  = open("output.txt",'r+')
+app= file2.write(data)
+file2.close()
+file1 = open("output.txt",'r')
+read = file1.read()
+print("Data successfully written to the file output.txt")
+file1.close()
+
+file3 = open("output.txt",'a')
+data1 = str(input("Enter additional text to append:"))
+append = file3.write(data1)
+file3.close()
+print("Data successfully appended")
+
+file4 = open("output.txt",'r')
+read1 = file4.read()
+print("final content of learning python:", read1)
+file4.close()
